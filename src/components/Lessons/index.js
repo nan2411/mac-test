@@ -115,36 +115,36 @@ class Lessons extends Component{
 
         let less = [];
         let icon = '';
-        let iconCheck = <img src='/assets/images/icons/check.svg' class={classes.iconos}/>;
+        let iconCheck = <img src='./assets/images/icons/check.svg' class={classes.iconos}/>;
         if(lessons){
             lessons.forEach((lesson,idx) => {
                 if(lesson.view){
-                    iconCheck = <img src='/assets/images/icons/checkO.svg' class={classes.iconos}/>;
+                    iconCheck = <img src='./assets/images/icons/checkO.svg' class={classes.iconos}/>;
                 }else{
-                    iconCheck = <img src='/assets/images/icons/check.svg' class={classes.iconos}/>;
+                    iconCheck = <img src='./assets/images/icons/check.svg' class={classes.iconos}/>;
                 }
                 if (pre){
                     if (lesson.type_name != 'video'){
-                        icon = <img src='/assets/images/icons/video.svg' class={classes.iconos}/>
-                        iconCheck = <img src='/assets/images/icons/checkO.svg' class={classes.iconos}/>;
+                        icon = <img src='./assets/images/icons/video.svg' class={classes.iconos}/>
+                        iconCheck = <img src='./assets/images/icons/checkO.svg' class={classes.iconos}/>;
                     } else if (lesson.type_name == 'test'){
-                        icon = <img src='/assets/images/icons/test.svg' class={classes.iconos}/>
+                        icon = <img src='./assets/images/icons/test.svg' class={classes.iconos}/>
                     }else if (lesson.type_name == 'todo'){
-                        icon = <img src='/assets/images/icons/manzana-y-libros.svg' class={classes.iconos}/>
+                        icon = <img src='./assets/images/icons/manzana-y-libros.svg' class={classes.iconos}/>
                     }else if (lesson.type_name == 'game'){
-                        icon = <img src='/assets/images/icons/game.svg' class={classes.iconos}/>
+                        icon = <img src='./assets/images/icons/game.svg' class={classes.iconos}/>
                     }
                 }else{
-                    let iconCheck = <img src='/assets/images/icons/check.svg' class={classes.iconos}/>;
+                    let iconCheck = <img src='./assets/images/icons/check.svg' class={classes.iconos}/>;
                     if (lesson.type_name != 'video'){
-                        icon = <img src='/assets/images/icons/video.svg' class={classes.iconos}/>
-                        iconCheck = <img src='/assets/images/icons/checkO.svg' class={classes.iconos}/>;
+                        icon = <img src='./assets/images/icons/video.svg' class={classes.iconos}/>
+                        iconCheck = <img src='./assets/images/icons/checkO.svg' class={classes.iconos}/>;
                     } else if (lesson.type_name == 'test'){
-                        icon = <img src='/assets/images/icons/testG.svg' class={classes.iconos}/>
+                        icon = <img src='./assets/images/icons/testG.svg' class={classes.iconos}/>
                     }else if (lesson.type_name == 'todo'){
-                        icon = <img src='/assets/images/icons/manzana-y-librosG.svg' class={classes.iconos}/>
+                        icon = <img src='./assets/images/icons/manzana-y-librosG.svg' class={classes.iconos}/>
                     }else if (lesson.type_name == 'game'){
-                        icon = <img src='/assets/images/icons/gameG.svg' class={classes.iconos}/>
+                        icon = <img src='./assets/images/icons/gameG.svg' class={classes.iconos}/>
                     }
                 }
                 less.push(
@@ -297,10 +297,10 @@ class Lessons extends Component{
             <Col xs={12} className={classes.textLessonCenter}>
                 <Col xs={12} className={classes.divTwo}>
                     <Col xs={6}>
-                        <img src="/assets/images/icons/trophy.svg" className={classes.iconBig}/>
+                        <img src="./assets/images/icons/trophy.svg" className={classes.iconBig}/>
                     </Col>
                     <Col xs={6}>
-                        <img src="/assets/images/icons/flag.svg" className={classes.iconBig}/>
+                        <img src="./assets/images/icons/flag.svg" className={classes.iconBig}/>
                     </Col>
                 </Col>
                 <Col xs={12} className={classes.divTwo}>

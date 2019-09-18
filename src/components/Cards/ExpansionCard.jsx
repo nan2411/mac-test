@@ -255,19 +255,19 @@ class ExpansionCard extends React.Component{
                 let estrellas=[];
                 for (let i = 0; i < item.startActive; i++) {
                     estrellas.push(
-                        <img alt="start" src="/assets/images/icons/start.svg" className={classes.iconosStart}/>
+                        <img alt="start" src="./assets/images/icons/start.svg" className={classes.iconosStart}/>
                     )
                 }
                 for (let i = 0; i < (item.start - item.startActive); i++) {
                     estrellas.push(
-                        <img alt="startI" src="/assets/images/icons/startIn.svg" className={classes.iconosStart}/>
+                        <img alt="startI" src="./assets/images/icons/startIn.svg" className={classes.iconosStart}/>
                     )
                 }
 
                 return(
                     <Row className={classes.div2}>
                         <Col xs={1} className={classes.divIconosExpand} >
-                            <img alt="book" src="/assets/images/icons/flagI.svg" className={classes.iconosJuego}/>
+                            <img alt="book" src="./assets/images/icons/flagI.svg" className={classes.iconosJuego}/>
                         </Col>
                         <Col xs={11} className={classes.divStart}>
                             <Typography className={classes.cardDescriptionExpand}>{item.name}</Typography>
@@ -306,7 +306,7 @@ class ExpansionCard extends React.Component{
                 return(
                     <Row className={classes.div2}>
                         <Col xs={2} className={classes.divIconosExpand} >
-                            <img alt="book" src="/assets/images/icons/openBook.svg" className={classes.iconos}/>
+                            <img alt="book" src="./assets/images/icons/openBook.svg" className={classes.iconos}/>
                         </Col>
                         <Col xs={10} >
                             <Typography className={classes.cardDescriptionExpand}>{lesson.name}</Typography>

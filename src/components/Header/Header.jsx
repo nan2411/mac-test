@@ -77,7 +77,7 @@ function Header({ ...props }) {
           <MenuIcon />
         </IconButton>*/}
         <Button className={classes.buttonImage} component={Link} to={process.env.PUBLIC_URL + '/'}>
-          <img src="/assets/images/brandlogo.svg" className={classes.brandLogo}/>
+          <img src="./assets/images/brandlogo.svg" className={classes.brandLogo}/>
         </Button>
 
         <div className={classes.grow} />
@@ -94,9 +94,9 @@ function Header({ ...props }) {
           />
         </div>*/}
         <div>
-          <a className={classes.socialLinks}><img src="/assets/images/icons/twitter.svg" width="22" height="22"/></a>
-          <a className={classes.socialLinks}><img src="/assets/images/icons/facebook.svg" width="22" height="22"/></a>
-          <a className={classes.socialLinks}><img src="/assets/images/icons/instagram.svg" width="22" height="22"/></a>
+          <a className={classes.socialLinks}><img src="./assets/images/icons/twitter.svg" width="22" height="22"/></a>
+          <a className={classes.socialLinks}><img src="./assets/images/icons/facebook.svg" width="22" height="22"/></a>
+          <a className={classes.socialLinks}><img src="./assets/images/icons/instagram.svg" width="22" height="22"/></a>
         </div>
       </Toolbar>
     </AppBar>
