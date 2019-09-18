@@ -1,9 +1,9 @@
 {
-  "name": "mac",
+  "name": "mac-test",
   "version": "0.1.0",
   "description": "Mac",
   "private": true,
-  "homepage": "https://nan2411.github.io/mac",
+  "homepage": "https://nan2411.github.io/mac-test",
   "dependencies": {
     "@material-ui/core": "^3.8.2",
     "@material-ui/icons": "^3.0.2",
@@ -19,6 +19,7 @@
     "perfect-scrollbar": "^1.4.0",
     "react": "^16.7.0",
     "react-chartist": "^0.13.1",
+    "react-circular-progressbar": "^2.0.2",
     "react-dom": "^16.7.0",
     "react-flexbox-grid": "^2.1.2",
     "react-flip-page": "^1.5.3",

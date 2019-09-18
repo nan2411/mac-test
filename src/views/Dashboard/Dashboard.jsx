@@ -20,6 +20,7 @@ import {
   emailsSubscriptionChart,
 } from "../../variables/charts";
 import {getStats} from "../../rdx/actions/UserActions";
+import CircularProgress from "./../../components/ProgressBar/CircularProgressbar";
 
 //Custom Componentes
 import {
@@ -42,6 +43,7 @@ class Dashboard extends React.Component {
       slideCardOne : false,
       certificado:false
     };
+
   }
   componentDidMount(){
     this.props.getStats();
@@ -70,10 +72,18 @@ class Dashboard extends React.Component {
     const {stats,t,classes} = this.props;
     let data = {
         labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6', 'Sem 7', 'Sem 8', 'Sem 9', 'Sem 10'],
-        series: [[5, 4, 3, 7, 5, 10, 3, 4, 8, 10]]
+        series: [[50, 40, 30, 70, 50, 100, 35, 47, 89, 23]]
     };
     let options = {};
     let type='Bar'
+    let divs=[];
+    data.series[0].map((item, id) =>{
+        divs.push(
+            <div className={classes.circleProgressD}>
+                <CircularProgress percent={item} text={id+1}/>
+            </div>
+        )
+    })
 
     return (
       <div>
@@ -97,7 +107,11 @@ class Dashboard extends React.Component {
             <Grid item xs={12} >
               <div className={'grafics'}>
                 <ChartistGraph data={data} options={options} type={type}/>
+                <div className={classes.divProgressD}>
+                    {divs}
+                </div>
               </div>
+
             </Grid>
           </Grid>
           <Grid container><ExpansionCard/></Grid>

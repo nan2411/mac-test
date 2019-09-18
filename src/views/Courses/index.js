@@ -38,8 +38,7 @@ class Courses extends Component{
         let courses = [];
         const { classes,t } = this.props;
 
-        this.props.courses.forEach((course,idx)=>{
-            console.log(course)
+    this.props.courses.forEach((course,idx)=>{
             course.image='http://localhost:3000/assets/images/slider1.png';
             if(idx == 0){
                 course.locked=false;
@@ -47,15 +46,7 @@ class Courses extends Component{
             courses.push(
 
                 <Col lg={3} md={3} xs={3} between='xs' key={idx} sm={12} className={classes.caja}>
-                {
-                    course.locked ?
-                    this.obtainCurso(idx, course)
-                    :
-                    <Link disabled="true" to={{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course}}>
-                        {this.obtainCurso(idx, course)}
-                    </Link>
-
-                }
+                {this.obtainCurso(idx, course)}
                 </Col>
             );
         });
@@ -77,37 +68,68 @@ class Courses extends Component{
                     {/*course.viewed && <Tooltip title={t('viewed')} placement="top"  classes={{tooltip:classes.tooltip}}>
                         <Icon className="big-icon viewed-image">done_all</Icon>
                     </Tooltip>*/}
-
+                    {(course.locked)?
+                         <div className={classes.lockIconWrapper} style={{height : this.state.dinamicHeight}}>
+                        <div className={classes.lockIconMiddle}>
+                            <img src="./assets/images/icons/lock.svg" className={classes.lockIconImage}/>
+                        </div>
+                      </div>
+                      :
+                        <Link to={{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course}}>
 
                       <div className={classes.lockIconWrapper} style={{height : this.state.dinamicHeight}}>
                         <div className={classes.lockIconMiddle}>
-                            {(course.locked)?
-                                <img src="./assets/images/icons/lock.svg" className={classes.lockIconImage}/>
-                                :
-                                <img src="./assets/images/icons/play.svg" className={classes.lockIconImage}/>
-                            }
+                            <img src="./assets/images/icons/play.svg" className={classes.lockIconImage}/>     
                         </div>
                       </div>
-
+                       </Link>
+                  }
+                  {course.locked ?
                     <CardMedia
                         image={course.image}
                         title={course.name}
                         className={`achievement-card-image ${course.locked?'image-disabled':''}`} />
-                    <LinearProgress color="secondary" variant="determinate" value={(parseInt(course.advance,10)/parseInt(course.lessons,10))*100} />
-                    <CardContent>
+                    :
+                    <Link to={{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course}}>
+                        <CardMedia
+                        image={course.image}
+                        title={course.name}
+                        className={`achievement-card-image ${course.locked?'image-disabled':''}`} />
+                    </Link>
+                }
 
-                    <Typography variant="headline" component="h5" style={{fontSize:'1rem', fontWeight: 'bold'}}>
-                      <span className={classes.lessonTittle}> {t('lesson')} {idx + 1 }: </span>{course.name}{course.locked}
-                      </Typography>
-                      <Typography className="courses-description" component="p">
-                          {course.description}
-                      </Typography>
+                    
+                    <LinearProgress color="secondary" variant="determinate" value={(parseInt(course.advance,10)/parseInt(course.lessons,10))*100} />
+                    
+
+                   {course.locked ?
+                    <CardContent>
+                        <Typography variant="headline" component="h5" style={{fontSize:'1rem', fontWeight: 'bold'}}>
+                          <span className={classes.lessonTittle}> {t('lesson')} {idx + 1 }: </span>{course.name}{course.locked}
+                          </Typography>
+                          <Typography className="courses-description" component="p">
+                              {course.description}
+                        </Typography>
                     </CardContent>
+                    :
+                    <Link  to={{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course}}>
+                        <CardContent>
+                            <Typography variant="headline" component="h5" style={{fontSize:'1rem', fontWeight: 'bold'}}>
+                              <span className={classes.lessonTittle}> {t('lesson')} {idx + 1 }: </span>{course.name}{course.locked}
+                              </Typography>
+                              <Typography className="courses-description" component="p">
+                                  {course.description}
+                          </Typography>
+                        </CardContent>
+                    </Link>
+                }
+
+                    
                     <CardActions>
                         {/*<Button component={Link} to={{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course}}  color="secondary" disabled={!course.locked?true:false}>{t('lessons')}</Button>*/}
 
                         <div className={classes.accionLinksSeccion}>
-                          <a onClick={console.log('descarga')} className={classes.accionLinksButtons} href={course.locked ? null : true}>
+                          <a className={classes.accionLinksButtons} href={course.locked ? null : '#'}>
                             <img src="./assets/images/icons/audio.svg" width="22" height="22"/>
                           </a>
                          {/*<a className={classes.accionLinksButtons}>

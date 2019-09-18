@@ -170,6 +170,7 @@ const tasksStyle = {
     },
     video:{
         width:'100%',
+        height:'40vh',
     },
     titleLesson:{
         color:orangeText,
@@ -203,6 +204,69 @@ const tasksStyle = {
     },
     caja:{
         padding: '0px 20px 20px 20px',
+    },
+    gameFrame:{
+        width:'100% !important',
+        height:'40vh !important',
+    },
+    circleProgress:{
+        margin:'5px',
+        fontWeight: '600',
+        width:'60px',
+    },
+    divProgress:{
+        display:'flex',
+        justifyContent: 'space-between',
+    },
+    paper:{
+        background:'#ffffff',
+        width: '50%',
+        padding:'35px',
+    },
+    modal:{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    divQuestion:{
+        display:'flex',
+        marginBottom:'15px'
+    },
+    FormControlRadio:{
+        display:'flex',
+    },
+    title:{
+        textAlign: 'center',
+        color:orangeText,
+    },
+    boton:{
+        textAlign: 'center',
+        backgroundColor:orangeText,
+        color:'#FFFFFF',
+        border:'none',
+        padding: '10px',
+        width: '100px',
+        fontSize:'16px',
+    },
+    botonI:{
+        textAlign: 'center',
+        backgroundColor:grayColor,
+        color:'#FFFFFF',
+        border:'none',
+        padding: '10px',
+        width: '100px',
+        fontSize:'16px',
+    },
+    radio:{
+        color:orangeText,
+    },
+    titleQuestion:{
+        fontWeight:'500',
+        margin:'0px',
+    },
+    divScroll:{
+        overflow: 'auto',
+        height: '65vh'
     }
 
 };

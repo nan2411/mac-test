@@ -81,28 +81,39 @@ class ExpansionCard extends React.Component{
 
     }
     handleExpandClick(type) {
+        let { expandedGame } = this.state;
+
         if (type=='lesson'){
             let { expandedLesson } = this.state;
             this.setState({expandedLesson: !expandedLesson});
         }else if (type=='game'){
-            let { expandedGame } = this.state;
-            this.setState({expandedGame: !expandedGame});
+            //let { expandedGame } = this.state;
+            expandedGame =!expandedGame;
+            this.setState({expandedGame: expandedGame});
         }else{
             let { expandedAchivmentn } = this.state;
             this.setState({expandedAchivmentn: !expandedAchivmentn});
+        }
+        if(expandedGame){
+            localStorage.setItem('linkGame', true)
+            localStorage.setItem('linkGameUrl', "https://playcanv.as/p/bWxOvull/")
+        }else{
+             localStorage.setItem('linkGame', false)
+             localStorage.setItem('linkGameUrl', null)
         }
 
         // let { expanded } = this.state;
         // this.setState({expanded: !expanded});
     }
     render(){
+        let { course } = this.state;
         let data1 = {
             title:'Lecciones',
             expanded:this.state.expandedLesson,
             type:'lesson',
             link:'Ver lecciones',
             icon:'/assets/images/icons/book.svg',
-            linkURL:{pathname:`${process.env.PUBLIC_URL}/curso/${this.state.course.slug}`,params:this.state.course},
+            linkURL:{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course},
             data: {
                 title:'Lección de la semana',
                 name:'Bajarle al estres y entrenar la resilencia',
@@ -133,7 +144,9 @@ class ExpansionCard extends React.Component{
             expanded:this.state.expandedLesson,
             type:'game',
             link:'Ver proceso',
+            content: "https://playcanv.as/p/bWxOvull/",
             icon:'/assets/images/icons/flag.svg',
+            linkURL:{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course},
             data: {
                 title:'Ultimo juego completado',
                 name:'Bajarle al estres y entrenar la resilencia',
@@ -202,7 +215,7 @@ class ExpansionCard extends React.Component{
                                 </Typography>
                             </Link>
                             : (item.type == 'game') ?
-                            <Link to={()=>{console.log('hola')}}>
+                            <Link to={item.linkURL}>
                                 <Typography className={classes.link}>
                                   Ir al juego
                                 </Typography>
@@ -235,7 +248,6 @@ class ExpansionCard extends React.Component{
     }
 
     juegos(){
-        //<iframe src={lesson.content} frameborder="0" className="gameFrame" title={lesson.name}>Game content</iframe>
         let { classes } = this.props;
         let { juegos } = this.state;
         return(

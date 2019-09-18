@@ -8,8 +8,10 @@ import {getCourse, setLessons} from "./../../rdx/actions/coursesActions";
 class Course extends Component{
 
     componentDidMount(){
+
         this.props.getCourse(this.props.match.params.slug);
         this.props.setLessons(false);
+
     }
 
     render(){

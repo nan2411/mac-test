@@ -33,7 +33,17 @@ const dashboardStyle = {
     color: "black",
     fontWeight: "400",
     lineHeight: "inherit"
- }
+    },
+    circleProgressD:{
+        margin:'5px',
+        fontWeight: '600',
+        width:'50px',
+    },
+    divProgressD:{
+        margin: '0px 15px 0px 48px',
+        display:'flex',
+        justifyContent: 'space-between',
+},
 };
 
 export default dashboardStyle;
