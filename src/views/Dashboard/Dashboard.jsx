@@ -72,7 +72,7 @@ class Dashboard extends React.Component {
     const {stats,t,classes} = this.props;
     let data = {
         labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6', 'Sem 7', 'Sem 8', 'Sem 9', 'Sem 10'],
-        series: [[50, 40, 30, 70, 50, 100, 35, 47, 89, 23]]
+        series: [[50, 40, 30, 70, 50, 100, 35, 47, 89, 0]]
     };
     let options = {};
     let type='Bar'
@@ -83,6 +83,12 @@ class Dashboard extends React.Component {
                 <CircularProgress percent={item} text={id+1}/>
             </div>
         )
+        if(id != 9){
+            divs.push(
+                <hr className={classes.divSeparador}/>
+
+            )
+        }
     })
 
     return (

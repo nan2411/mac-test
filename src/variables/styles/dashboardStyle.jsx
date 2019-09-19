@@ -2,7 +2,7 @@
 // // // Dashboard styles
 // #############################
 
-import { successColor,warningColor, buttonMacTheme, primaryGray } from "../../variables/styles";
+import { successColor,warningColor, buttonMacTheme, primaryGray, orangeText } from "../../variables/styles";
 
 const dashboardStyle = {
   successText: {
@@ -35,15 +35,24 @@ const dashboardStyle = {
     lineHeight: "inherit"
     },
     circleProgressD:{
-        margin:'5px',
         fontWeight: '600',
         width:'50px',
+        display: 'table-cell',
     },
     divProgressD:{
-        margin: '0px 15px 0px 48px',
+        margin: '0px 25px 0px 60px',
         display:'flex',
         justifyContent: 'space-between',
-},
+        alignItems:'center'
+    },
+    divSeparador:{
+        borderTop: '6px solid',
+        borderColor: orangeText,
+        width: '5%',
+        display: 'table-cell',
+        marginTop:'-1px',
+        marginLeft:'-1px'
+    }
 };
 
 export default dashboardStyle;

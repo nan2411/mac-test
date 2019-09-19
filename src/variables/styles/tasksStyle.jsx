@@ -267,6 +267,28 @@ const tasksStyle = {
     divScroll:{
         overflow: 'auto',
         height: '65vh'
+    },
+    divSeparadorL:{
+        borderTop: '6px solid',
+        borderColor: orangeText,
+        width: '5%',
+        display: 'table-cell',
+        marginTop:'-1px',
+        marginLeft:'-1px'
+    },
+    circleProgressDL:{
+        fontWeight: '600',
+        width:'50px',
+        display: 'table-cell',
+    },
+    divProgressDL:{
+        margin: '0px',
+        display:'flex',
+        justifyContent: 'space-between',
+        alignItems:'center'
+    },
+    divCirculos:{
+        margin:'15px 0px'
     }
 
 };

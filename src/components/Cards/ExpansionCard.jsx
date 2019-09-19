@@ -48,16 +48,16 @@ class ExpansionCard extends React.Component{
                 {id: 10, name: "Habitos de Grandeza", startActive: 0, start:1},
             ],
             logros:[
-                {image:'./assets/images/icons/sentido.svg', title:'Sentido', status:true},
-                {image:'./assets/images/icons/relaciones.svg', title:'Relaciones', status:true},
-                {image:'./assets/images/icons/presencia.svg', title:'Presencia', status:false},
-                {image:'./assets/images/icons/perdon.svg', title:'Perdón', status:false},
-                {image:'./assets/images/icons/mente.svg', title:'Mente-Cuerpo', status:false},
-                {image:'./assets/images/icons/habitos.svg', title:'Habitos de Grandeza', status:false},
-                {image:'./assets/images/icons/gratitud.svg', title:'Gratitud', status:false},
-                {image:'./assets/images/icons/compasion.svg', title:'Compasión', status:false},
-                {image:'./assets/images/icons/afirmaciones.svg', title:'Afirmaciones', status:false},
-                {image:'./assets/images/icons/aceptacion.svg', title:'Aceptación', status:false},
+                {image:'/assets/images/icons/sentido.svg', title:'Sentido', status:true},
+                {image:'/assets/images/icons/relaciones.svg', title:'Relaciones', status:true},
+                {image:'/assets/images/icons/presencia.svg', title:'Presencia', status:false},
+                {image:'/assets/images/icons/perdon.svg', title:'Perdón', status:false},
+                {image:'/assets/images/icons/mente.svg', title:'Mente-Cuerpo', status:false},
+                {image:'/assets/images/icons/habitos.svg', title:'Habitos de Grandeza', status:false},
+                {image:'/assets/images/icons/gratitud.svg', title:'Gratitud', status:false},
+                {image:'/assets/images/icons/compasion.svg', title:'Compasión', status:false},
+                {image:'/assets/images/icons/afirmaciones.svg', title:'Afirmaciones', status:false},
+                {image:'/assets/images/icons/aceptacion.svg', title:'Aceptación', status:false},
             ]
         }
     }
@@ -112,7 +112,7 @@ class ExpansionCard extends React.Component{
             expanded:this.state.expandedLesson,
             type:'lesson',
             link:'Ver lecciones',
-            icon:'./assets/images/icons/book.svg',
+            icon:'/assets/images/icons/book.svg',
             linkURL:{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course},
             data: {
                 title:'Lección de la semana',
@@ -129,7 +129,7 @@ class ExpansionCard extends React.Component{
             expanded:this.state.expandedLesson,
             type:'achivmentn',
             link:'Ver logros',
-            icon:'./assets/images/icons/trophy.svg',
+            icon:'/assets/images/icons/trophy.svg',
             data: {
                 title:'Ultimo logro',
                 name:'Sentido',
@@ -145,7 +145,7 @@ class ExpansionCard extends React.Component{
             type:'game',
             link:'Ver proceso',
             content: "https://playcanv.as/p/bWxOvull/",
-            icon:'./assets/images/icons/flag.svg',
+            icon:'/assets/images/icons/flag.svg',
             linkURL:{pathname:`${process.env.PUBLIC_URL}/curso/${course.slug}`,params:course},
             data: {
                 title:'Ultimo juego completado',
