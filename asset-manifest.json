@@ -1,10 +1,21 @@
 {
-  "main.css": "/mac-test/static/css/main.55902f83.chunk.css",
-  "main.js": "/mac-test/static/js/main.074f7f1d.chunk.js",
+  "main.css": "/mac-test/static/css/main.c6cca69d.chunk.css",
+  "main.js": "/mac-test/static/js/main.093aa420.chunk.js",
   "runtime~main.js": "/mac-test/static/js/runtime~main.1bf4d811.js",
   "static/css/2.5cffc339.chunk.css": "/mac-test/static/css/2.5cffc339.chunk.css",
-  "static/js/2.064acb7e.chunk.js": "/mac-test/static/js/2.064acb7e.chunk.js",
+  "static/js/2.af3fd70c.chunk.js": "/mac-test/static/js/2.af3fd70c.chunk.js",
   "index.html": "/mac-test/index.html",
-  "precache-manifest.2317aab7682d87f706632fe6f78f3790.js": "/mac-test/precache-manifest.2317aab7682d87f706632fe6f78f3790.js",
-  "service-worker.js": "/mac-test/service-worker.js"
+  "precache-manifest.fd4cb582a1f4fd6144f0e2e04d8d68c8.js": "/mac-test/precache-manifest.fd4cb582a1f4fd6144f0e2e04d8d68c8.js",
+  "service-worker.js": "/mac-test/service-worker.js",
+  "static/media/check.svg": "/mac-test/static/media/check.21791d1a.svg",
+  "static/media/checkO.svg": "/mac-test/static/media/checkO.42a483f4.svg",
+  "static/media/flag.svg": "/mac-test/static/media/flag.6746a970.svg",
+  "static/media/game.svg": "/mac-test/static/media/game.54ad2039.svg",
+  "static/media/gameG.svg": "/mac-test/static/media/gameG.b93c92ae.svg",
+  "static/media/manzana-y-libros.svg": "/mac-test/static/media/manzana-y-libros.be943657.svg",
+  "static/media/manzana-y-librosG.svg": "/mac-test/static/media/manzana-y-librosG.c57c037d.svg",
+  "static/media/test.svg": "/mac-test/static/media/test.74cbe3e2.svg",
+  "static/media/testG.svg": "/mac-test/static/media/testG.421b035d.svg",
+  "static/media/trophy.svg": "/mac-test/static/media/trophy.b3c6c8d4.svg",
+  "static/media/video.svg": "/mac-test/static/media/video.895de00e.svg"
 }
