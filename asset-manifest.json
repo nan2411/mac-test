@@ -1,10 +1,10 @@
 {
   "main.css": "/mac-test/static/css/main.55902f83.chunk.css",
-  "main.js": "/mac-test/static/js/main.cf7ed3b0.chunk.js",
+  "main.js": "/mac-test/static/js/main.074f7f1d.chunk.js",
   "runtime~main.js": "/mac-test/static/js/runtime~main.1bf4d811.js",
   "static/css/2.5cffc339.chunk.css": "/mac-test/static/css/2.5cffc339.chunk.css",
   "static/js/2.064acb7e.chunk.js": "/mac-test/static/js/2.064acb7e.chunk.js",
   "index.html": "/mac-test/index.html",
-  "precache-manifest.410ed3b6739292e9c7a85fd805922538.js": "/mac-test/precache-manifest.410ed3b6739292e9c7a85fd805922538.js",
+  "precache-manifest.2317aab7682d87f706632fe6f78f3790.js": "/mac-test/precache-manifest.2317aab7682d87f706632fe6f78f3790.js",
   "service-worker.js": "/mac-test/service-worker.js"
 }
